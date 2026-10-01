@@ -76,7 +76,7 @@ def schematic():
         lib+=f'(property "Value" {quote(part["value"])} (at 0 {-height/2-3} 0) (effects (font (size 1 1)))) '
         lib+=f'(symbol "{stem}_0_1" (rectangle (start -9 {height/2+1.27}) (end 9 {-height/2-1.27}) (stroke (width 0.254) (type default)) (fill (type background)))) '
         lib+=f'(symbol "{stem}_1_1" '
-        x=70+(index%5)*120;y=100+(index//5)*65
+        x=69.85+(index%5)*121.92;y=101.6+(index//5)*63.5
         coords=[]
         for n,(pin,net) in enumerate(pins.items()):
             left=n<side;row=n if left else n-side
@@ -98,6 +98,11 @@ def schematic():
     text=f'(kicad_sch (version 20231120) (generator "eeschema") (uuid {rootuid}) (paper "A1") (lib_symbols {" ".join(libs)}) '
     text+=' '.join(instances+labels)+')'
     (OUT/"traction_carrier.kicad_sch").write_text(text)
+    library='(kicad_symbol_lib (version 20231120) (generator "kicad_symbol_editor") '+ ' '.join(s.replace('(symbol "AMR:', '(symbol "',1) for s in libs)+')'
+    (OUT/'AMR.kicad_sym').write_text(library)
+    (OUT/'sym-lib-table').write_text('(sym_lib_table (version 7) (lib (name "AMR") (type "KiCad") (uri "${KIPRJMOD}/AMR.kicad_sym") (options "") (descr "Project carrier symbols")))')
+    libraries=sorted({p['fp'].split(':')[0] for p in P})
+    (OUT/'fp-lib-table').write_text('(fp_lib_table (version 7) '+ ' '.join(f'(lib (name "{name}") (type "KiCad") (uri "${{KICAD9_FOOTPRINT_DIR}}/{name}.pretty") (options "") (descr "KiCad standard library"))' for name in libraries)+')')
     with (OUT/"bom.csv").open("w",newline="") as f:
         writer=csv.writer(f);writer.writerow(["Reference","Value","Footprint"])
         writer.writerows((p["ref"],p["value"],p["fp"]) for p in P)

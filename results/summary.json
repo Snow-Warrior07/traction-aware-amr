@@ -57,8 +57,8 @@
     },
     {
       "phase": 3,
-      "status": "pending",
-      "result": "ROS DDS, service, TF and bag replay await Linux execution.",
+      "status": "verified",
+      "result": "ROS DDS, service, TF and bag replay executed.",
       "evidence": "results/ros_smoke.json"
     },
     {
@@ -338,7 +338,27 @@
       "duration_s": 16.0
     }
   ],
-  "ros": null,
+  "ros": {
+    "elapsed_live_s": 11.860910321999995,
+    "messages": {
+      "odom": 881,
+      "commands": 881,
+      "tf": 881
+    },
+    "body_displacement_m": 3.5235823374456876,
+    "service_success": true,
+    "replayed_odom_messages": 430,
+    "bag_created": true
+  },
   "gazebo": null,
-  "spice": null
+  "spice": {
+    "rc_expected_tau_s": 0.001,
+    "measured_tau_s": 0.00100116,
+    "final_v": 2.64908772,
+    "adc_bits": 12,
+    "current_resolution_a": 0.008058608058608058,
+    "sense_offset_v": 1.65,
+    "sense_gain_v_a": 0.1,
+    "model_scope": "external driver sense modeled as an ideal source; real PCB RC simulated by ngspice"
+  }
 }

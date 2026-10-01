@@ -6,7 +6,7 @@ All values below come from executed software tests. Missing evidence remains pen
 |---|---|---|---|
 | 1 | verified | Requirements, rates, sensor/control boundaries and scenario matrix fixed. | docs/requirements.md; config/robot.yaml; experiments/scenarios.yaml |
 | 2 | partial | Mathematical plant invariants, friction, payload and timestep checks passed; Gazebo execution pending. | tests/test_control_plant.py; results/gazebo_smoke.json |
-| 3 | pending | ROS DDS, service, TF and bag replay await Linux execution. | results/ros_smoke.json |
+| 3 | verified | ROS DDS, service, TF and bag replay executed. | results/ros_smoke.json |
 | 4 | verified | LQR controllable/stable at design point; worst dry RMSE 0.0088 m. | tests/test_control_plant.py; results/matrix.json |
 | 5 | verified | All nonlinear runs finite and complete. Nonlinear supervision changes low-traction integrated slip by 18.5% reduction; 20% hypothesis not met. | results/matrix.json; docs/control-derivation.md |
 | 6 | partial | Virtual board trip/timeout/quantization tests passed; KiCad/SPICE verification pending or failed; inspect CI. | results/drc.json; results/erc.json; results/spice.json; hardware/ |

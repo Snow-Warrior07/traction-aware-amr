@@ -2,6 +2,9 @@ name: Phase verification
 on:
   push:
   workflow_dispatch:
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -70,11 +73,14 @@ jobs:
           kicad-cli version
       - run: python3 tools/check_spice.py
       - run: python3 tools/generate_pcb.py
-      - name: Electrical and layout checks
-        run: |
-          kicad-cli sch erc --format json --output results/erc.json --exit-code-violations hardware/kicad/traction_carrier.kicad_sch
-          kicad-cli pcb drc --format json --output results/drc.json --exit-code-violations --severity-error hardware/kicad/traction_carrier.kicad_pcb
+        id: board
+      - name: Electrical rule check
+        run: kicad-cli sch erc --format json --output results/erc.json --exit-code-violations hardware/kicad/traction_carrier.kicad_sch
+      - name: Layout rule check
+        if: always() && steps.board.outcome == 'success'
+        run: kicad-cli pcb drc --format json --output results/drc.json --exit-code-violations --severity-error hardware/kicad/traction_carrier.kicad_pcb
       - name: Export virtual and fabrication artifacts
+        if: always() && steps.board.outcome == 'success'
         run: |
           mkdir -p hardware/exports
           kicad-cli sch export svg --output hardware/exports/ hardware/kicad/traction_carrier.kicad_sch

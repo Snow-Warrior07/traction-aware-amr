@@ -47,7 +47,7 @@ def raw(path):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=["account", "repo", "create", "runs", "jobs", "logs", "artifacts", "download", "pages", "enable-pages", "release"])
+    parser.add_argument("action", choices=["account", "repo", "create", "runs", "jobs", "logs", "artifacts", "download", "pages", "enable-pages", "release", "cancel", "dispatch", "status"])
     parser.add_argument("--owner", default="Snow-Warrior07")
     parser.add_argument("--repo", default="traction-aware-amr")
     parser.add_argument("--id",type=int,default=0)
@@ -73,7 +73,20 @@ def main():
         entries=result[args.action]
         print(json.dumps([{key:x.get(key) for key in ["id","name","status","conclusion","html_url","size_in_bytes","expired","steps"]} for x in entries],indent=2))
     elif args.action=="logs":
-        print(raw(base+f"/actions/jobs/{args.id}/logs").decode(errors="replace")[-20000:])
+        log=raw(base+f"/actions/jobs/{args.id}/logs").decode(errors="replace")
+        dest=Path(__file__).resolve().parents[1]/".tools"/"logs";dest.mkdir(parents=True,exist_ok=True)
+        (dest/f"{args.id}.log").write_text(log,encoding='utf-8')
+        errors=[i for i,line in enumerate(log.splitlines()) if any(s in line for s in ['Traceback','##[error]','AssertionError','RuntimeError','E: '])]
+        if errors:
+            lines=log.splitlines();print('\n'.join(lines[max(0,min(errors)-5):max(errors)+3]))
+        else:print(log[-7000:])
+    elif args.action=="status":
+        result=request(base+f"/actions/runs/{args.id}/jobs")
+        print(json.dumps([dict(id=j['id'],name=j['name'],status=j['status'],conclusion=j['conclusion'],steps=[dict(name=s['name'],status=s['status'],conclusion=s['conclusion']) for s in j['steps'] if s['status']=='in_progress' or s['conclusion']=='failure']) for j in result['jobs']],indent=2))
+    elif args.action=="cancel":
+        print(json.dumps(request(base+f"/actions/runs/{args.id}/cancel","POST")))
+    elif args.action=="dispatch":
+        print(json.dumps(request(base+"/actions/workflows/verify.yml/dispatches","POST",{'ref':'main'})))
     elif args.action=="download":
         root=Path(__file__).resolve().parents[1];dest=(root/args.dest).resolve()
         if not dest.is_relative_to(root):raise RuntimeError("Artifact target must stay inside this project")

@@ -6,7 +6,7 @@
     <gravity>0 0 -9.81</gravity>
     <light name="sun" type="directional"><pose>0 0 10 0 0 0</pose><diffuse>1 1 1 1</diffuse><direction>-.5 .1 -1</direction></light>
     <model name="floor"><static>true</static><link name="link"><collision name="collision"><geometry><plane><normal>0 0 1</normal><size>30 20</size></plane></geometry><surface><friction><ode><mu>0.1</mu><mu2>0.1</mu2></ode></friction></surface></collision><visual name="visual"><geometry><plane><normal>0 0 1</normal><size>30 20</size></plane></geometry><material><diffuse>.4 .45 .5 1</diffuse></material></visual></link></model>
-    <model name="rover"><link name="base_link"><pose>0 0 .18 0 0 0</pose><inertial><mass>11.4</mass><inertia><ixx>.15</ixx><iyy>.22</iyy><izz>.5</izz></inertia></inertial>
+    <model name="rover"><link name="base_link"><pose>0 0 .18 0 0 0</pose><inertial><mass>11.4</mass><inertia><ixx>.09918</ixx><iyy>.19760</iyy><izz>.26942</izz></inertia></inertial>
     <collision name="body"><geometry><box><size>.44 .30 .12</size></box></geometry></collision><visual name="body"><geometry><box><size>.44 .30 .12</size></box></geometry><material><diffuse>.05 .4 .65 1</diffuse></material></visual>
     <visual name="virtual_pcb"><pose>0 0 .071 0 0 0</pose><geometry><box><size>.096 .096 .0016</size></box></geometry><material><diffuse>.05 .55 .2 1</diffuse></material></visual></link>
     <link name="caster"><pose>-.17 0 .035 0 0 0</pose><inertial><mass>.1</mass><inertia><ixx>.0001</ixx><iyy>.0001</iyy><izz>.0001</izz></inertia></inertial><collision name="collision"><geometry><sphere><radius>.035</radius></sphere></geometry><surface><friction><ode><mu>.001</mu><mu2>.001</mu2></ode></friction></surface></collision></link>
