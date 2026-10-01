@@ -21,7 +21,7 @@ pico_names={1:"UART_TX",2:"UART_RX",3:"GND",4:"ENC_L_A",5:"ENC_L_B",6:"SDA",7:"S
   9:"ENC_R_A",10:"ENC_R_B",11:"PWM_L",12:"DIR_L",13:"GND",14:"PWM_R",15:"DIR_R",16:"MCU_ENABLE",
   18:"GND",23:"GND",28:"GND",31:"ADC_CURRENT_L",32:"ADC_CURRENT_R",33:"GND",34:"ADC_BUS",
   35:"ADC_VREF",36:"3V3",38:"GND",39:"5V",42:"GND"}
-P=[component("U1","Raspberry Pi Pico RP2040","Module:RaspberryPi_Pico",(50,48),{str(i):pico_names.get(i) for i in range(1,44)}),
+P=[component("U1","Raspberry Pi Pico RP2040","Module:RaspberryPi_Pico_Common_THT",(50,48),{str(i):pico_names.get(i) for i in range(1,41)}),
  component("U2","74HC08 AND gate","Package_DIP:DIP-14_W7.62mm",(10,30),
  {"1":"FAULT_L_N","2":"FAULT_R_N","3":"FAULT_OK","4":"MCU_ENABLE","5":"ARMED","6":"DRIVE_ENABLE",
   "7":"GND","8":None,"9":"GND","10":"GND","11":None,"12":"GND","13":"GND","14":"3V3"}),
@@ -111,7 +111,7 @@ def board():
     padlist=[];footprint_root=Path("/usr/share/kicad/footprints")
     for part in P:
         lib,name=part["fp"].split(":");fp=k.FootprintLoad(str(footprint_root/(lib+".pretty")),name)
-        if fp is None:raise RuntimeError("Missing footprint "+part["fp"])
+        if fp is None:raise RuntimeError("Missing footprint "+part["fp"]+"; available Pico footprints: "+str(list(footprint_root.glob("Module.pretty/*Pico*"))))
         fp.SetReference(part["ref"]);fp.SetValue(part["value"]);fp.SetPosition(k.VECTOR2I(k.FromMM(part["xy"][0]),k.FromMM(part["xy"][1])))
         for pad in fp.Pads():
             name=part["pins"].get(pad.GetNumber())

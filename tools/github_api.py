@@ -9,6 +9,8 @@ import subprocess
 import urllib.error
 import urllib.request
 from pathlib import Path
+import io
+import zipfile
 
 
 def credential():
@@ -37,12 +39,19 @@ def request(path, method="GET", data=None):
         body = error.read().decode()
         raise RuntimeError(f"GitHub API HTTP {error.code}: {body[:600]}") from None
 
+def raw(path):
+    req=urllib.request.Request("https://api.github.com"+path,headers={"User-Agent":"traction-aware-amr","Accept":"application/vnd.github+json"})
+    req.add_unredirected_header("Authorization","Bearer "+credential())
+    with urllib.request.urlopen(req,timeout=60) as response:return response.read()
+
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=["account", "repo", "create", "runs", "pages", "enable-pages", "release"])
+    parser.add_argument("action", choices=["account", "repo", "create", "runs", "jobs", "logs", "artifacts", "download", "pages", "enable-pages", "release"])
     parser.add_argument("--owner", default="Snow-Warrior07")
     parser.add_argument("--repo", default="traction-aware-amr")
+    parser.add_argument("--id",type=int,default=0)
+    parser.add_argument("--dest",default="results/ci")
     args = parser.parse_args()
     base = f"/repos/{args.owner}/{args.repo}"
     if args.action == "account":
@@ -59,6 +68,21 @@ def main():
         result = request(base + "/actions/runs?per_page=5")
         print(json.dumps([{"id": r["id"], "status": r["status"], "conclusion": r["conclusion"],
             "url": r["html_url"], "sha": r["head_sha"]} for r in result["workflow_runs"]], indent=2))
+    elif args.action in ["jobs","artifacts"]:
+        result=request(base+f"/actions/runs/{args.id}/{args.action}")
+        entries=result[args.action]
+        print(json.dumps([{key:x.get(key) for key in ["id","name","status","conclusion","html_url","size_in_bytes","expired","steps"]} for x in entries],indent=2))
+    elif args.action=="logs":
+        print(raw(base+f"/actions/jobs/{args.id}/logs").decode(errors="replace")[-20000:])
+    elif args.action=="download":
+        root=Path(__file__).resolve().parents[1];dest=(root/args.dest).resolve()
+        if not dest.is_relative_to(root):raise RuntimeError("Artifact target must stay inside this project")
+        payload=raw(base+f"/actions/artifacts/{args.id}/zip")
+        with zipfile.ZipFile(io.BytesIO(payload)) as archive:
+            for item in archive.infolist():
+                if not (dest/item.filename).resolve().is_relative_to(dest):raise RuntimeError("Unsafe artifact path")
+            archive.extractall(dest)
+        print(json.dumps({"destination":str(dest),"bytes":len(payload)}))
     elif args.action == "pages":
         print(json.dumps(request(base + "/pages")))
     elif args.action == "enable-pages":

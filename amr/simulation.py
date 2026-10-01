@@ -21,6 +21,7 @@ class Simulation:
         self.fault_injected_at=5. if fault else None
         self.external=external;self.last_external_command=0.;self.last_observation=None
         self.previous_sensor_v=0.
+        self.fault_stop_origin=None
     def friction(self):
         if self.surface=="dry" or not .8<self.state[0]<2.3:return .8,.8
         return (.10,.10) if self.surface=="patch" else (.10,.8)
@@ -88,6 +89,7 @@ class Simulation:
                 if fresh and not(self.fault=="command_timeout" and self.t>=5):self.board.set_command(tl,tr,self.t)
             forced=18. if self.fault=="overcurrent" and self.t>=5 else None
             dl,dr,current=self.board.tick(self.t,*self.state[5:7],self.state[7:9],forced_current=forced)
+            if not self.board.enabled and self.fault_stop_origin is None:self.fault_stop_origin=self.state[:2].copy()
             mu_l,mu_r=self.friction()
             core.plant_step(self.state,dl,dr,mu_l,mu_r,self.payload,self.dt,int(self.board.enabled))
             self.angles+=self.dt*self.state[5:7]
@@ -114,6 +116,7 @@ class Simulation:
             "stop_distance_m":None if self.stop_origin is None else float(np.linalg.norm(self.state[:2]-self.stop_origin)),
             "finite":bool(np.isfinite(a).all()),"drive_enabled":self.board.enabled,"fault":self.fault,
             "fault_reason":self.board.reason,"fault_disable_time_s":self.board.fault_time,
+            "fault_stopping_distance_m":None if self.fault_stop_origin is None else float(np.linalg.norm(self.state[:2]-self.fault_stop_origin)),
             "duration_s":self.tick*self.dt}
 
 TRACE_COLUMNS=["time_s","x_m","y_m","yaw_rad","v_m_s","yaw_rate_rad_s","wl_rad_s","wr_rad_s",

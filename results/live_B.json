@@ -27,7 +27,7 @@
     "compute_deadline_misses": 0,
     "wake_lateness_p99_ms": 0.5562955449568108,
     "wake_lateness_max_ms": 0.7079857750795782,
-    "start_utc": "2026-10-01T14:47:52.199084+00:00",
-    "host": "Windows-11-10.0.26200-SP0"
+    "host": "Windows-11-10.0.26200-SP0",
+    "end_utc": "2026-10-01T14:47:52.199084+00:00"
   }
 }

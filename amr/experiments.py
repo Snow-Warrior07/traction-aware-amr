@@ -21,6 +21,7 @@ def one(args):
     return result
 def live(variant="D",seconds=16,fault=None):
     sim=Simulation(variant,"patch",0,"curved",0,duration=seconds,fault=fault)
+    started_utc=datetime.now(timezone.utc).isoformat()
     start=time.perf_counter();compute=[];lateness=[];period=.02;next_tick=start
     while sim.tick*sim.dt < seconds-1e-8:
         now=time.perf_counter()
@@ -33,7 +34,7 @@ def live(variant="D",seconds=16,fault=None):
         "wall_seconds":wall,"period_ms":20,"compute_p99_ms":float(np.percentile(compute,99)*1000),
         "compute_max_ms":max(compute)*1000,"compute_deadline_misses":sum(t>period for t in compute),
         "wake_lateness_p99_ms":float(np.percentile(lateness,99)*1000),"wake_lateness_max_ms":max(lateness)*1000,
-        "start_utc":datetime.now(timezone.utc).isoformat(),"host":platform.platform()}
+        "start_utc":started_utc,"end_utc":datetime.now(timezone.utc).isoformat(),"host":platform.platform()}
     write(ROOT/f"results/live_{variant}{'_'+fault if fault else ''}.json",result)
     path=ROOT/f"results/trace_{variant}{'_'+fault if fault else ''}.csv"
     with path.open("w",newline="") as f:
