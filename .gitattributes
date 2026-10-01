@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.pdf binary
+*.mp4 binary
+*.zip binary
+*.png binary
+*.jpg binary
+# Preserve exact measurement/project bytes referenced by evidence hashes.
+results/** -text
+hardware/kicad/** -text
+hardware/spice/*.dat -text
+hardware/exports/*.net -text
+hardware/exports/*.step -text
+output/kicad/** -text

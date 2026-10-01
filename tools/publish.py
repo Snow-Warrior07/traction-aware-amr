@@ -23,6 +23,7 @@ if not (root/".git").exists():
 remotes=git("remote",output=True).splitlines()
 if "origin" not in remotes:git("remote","add","origin",existing["clone_url"])
 elif git("remote","get-url","origin",output=True)!=existing["clone_url"]:raise RuntimeError("Unexpected origin URL")
+git("add","--renormalize",".")
 git("add",".")
 dirty=git("diff","--cached","--name-only",output=True)
 if dirty:
