@@ -1,0 +1,17 @@
+.venv/
+.tools/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+ros_ws/build/
+ros_ws/install/
+ros_ws/log/
+*.kicad_prl
+*.kicad_sch.lck
+*.kicad_pcb.lck
+*-backups/
+results/raw/
+results/*_bag/
+

@@ -1,0 +1,13 @@
+Pico carrier current-sense filter; external driver output is modeled behaviorally
+* Current-sense output: 1.65 V at 0 A, 0.1 V/A; step represents 0 to 10 A.
+Vdriver sense 0 PULSE(1.65 2.65 1m 1u 1u 10m 20m)
+Rfilter sense adc 1k
+Cfilter adc 0 1u
+.control
+set wr_singlescale
+set wr_vecnames
+tran 10u 8m
+wrdata current_filter.dat v(sense) v(adc)
+quit
+.endc
+.end

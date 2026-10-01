@@ -1,0 +1,33 @@
+{
+  "variant": "D",
+  "surface": "patch",
+  "payload_kg": 0,
+  "trajectory": "curved",
+  "cross_track_rmse_m": 0.011097991846473022,
+  "cross_track_peak_m": 0.026281039218022502,
+  "heading_rmse_rad": 0.009609880706132053,
+  "integrated_slip_m": 0.27686656404176396,
+  "supervisor_active_fraction": 0.045,
+  "energy_j": 180.61042319941944,
+  "endpoint_error_m": 0.008926320934948538,
+  "completion": true,
+  "stop_distance_m": 0.013102161026220993,
+  "finite": true,
+  "drive_enabled": true,
+  "fault": null,
+  "fault_reason": "",
+  "fault_disable_time_s": null,
+  "duration_s": 16.0,
+  "timing": {
+    "mode": "wall-clock-paced soft real-time; not hard real-time",
+    "wall_seconds": 15.981825399969239,
+    "period_ms": 20,
+    "compute_p99_ms": 2.133033000282012,
+    "compute_max_ms": 2.60459998389706,
+    "compute_deadline_misses": 0,
+    "wake_lateness_p99_ms": 0.5738261906662955,
+    "wake_lateness_max_ms": 0.7765941554680467,
+    "start_utc": "2026-10-01T14:48:24.227534+00:00",
+    "host": "Windows-11-10.0.26200-SP0"
+  }
+}

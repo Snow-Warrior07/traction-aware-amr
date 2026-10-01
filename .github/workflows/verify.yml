@@ -1,0 +1,92 @@
+name: Phase verification
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  control:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q --junitxml=results/pytest.xml
+      - run: python -m amr.experiments matrix --workers 4
+      - run: python -m amr.experiments faults
+      - run: python -m amr.experiments live --variant D --seconds 16 --fault overcurrent
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: control-results
+          path: results/
+  ros-gazebo:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ROS Jazzy and Gazebo Harmonic
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl software-properties-common python3-venv
+          sudo add-apt-repository -y universe
+          sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/ros2.list
+          sudo apt-get update
+          sudo apt-get install -y ros-jazzy-ros-base ros-jazzy-ros-gz ros-jazzy-tf2-ros python3-colcon-common-extensions
+          python3 -m venv --system-site-packages .ci-venv
+          .ci-venv/bin/pip install -r requirements.txt
+          .ci-venv/bin/pip install -e .
+      - name: Build and test real ROS graph, services, TF and bag replay
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          source .ci-venv/bin/activate
+          cd ros_ws
+          colcon build --symlink-install
+          source install/setup.bash
+          cd ..
+          export ROS_DOMAIN_ID=43
+          python tools/ros_smoke.py
+          python tools/generate_world.py
+          python tools/gazebo_smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ros-gazebo-results
+          path: |
+            results/
+            models/
+            ros_ws/log/
+  pcb:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install KiCad 9 and ngspice
+        run: |
+          sudo add-apt-repository -y ppa:kicad/kicad-9.0-releases
+          sudo apt-get update
+          sudo apt-get install -y kicad ngspice python3-numpy
+          kicad-cli version
+      - run: python3 tools/generate_pcb.py
+      - run: python3 tools/check_spice.py
+      - name: Electrical and layout checks
+        run: |
+          kicad-cli sch erc --format json --output results/erc.json --exit-code-violations hardware/kicad/traction_carrier.kicad_sch
+          kicad-cli pcb drc --format json --output results/drc.json --exit-code-violations --severity-error hardware/kicad/traction_carrier.kicad_pcb
+      - name: Export virtual and fabrication artifacts
+        run: |
+          mkdir -p hardware/exports
+          kicad-cli sch export svg --output hardware/exports/ hardware/kicad/traction_carrier.kicad_sch
+          kicad-cli pcb export gerbers --output hardware/exports/gerbers/ hardware/kicad/traction_carrier.kicad_pcb
+          kicad-cli pcb export drill --output hardware/exports/gerbers/ hardware/kicad/traction_carrier.kicad_pcb
+          kicad-cli pcb export step --board-only --output hardware/exports/carrier.step hardware/kicad/traction_carrier.kicad_pcb
+          kicad-cli pcb render --output hardware/exports/carrier.png --width 1600 --height 1000 hardware/kicad/traction_carrier.kicad_pcb
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pcb-results
+          path: |
+            hardware/
+            results/

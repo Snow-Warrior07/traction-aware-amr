@@ -1,0 +1,18 @@
+surfaces: [dry, patch, asymmetric]
+payloads_kg: [0, 5, 10]
+trajectories: [straight, curved, stop]
+seeds: [0, 1, 2, 3, 4]
+variants:
+  A: {controller: lqr, supervisor: false}
+  B: {controller: lqr, supervisor: true}
+  C: {controller: nonlinear, supervisor: false}
+  D: {controller: nonlinear, supervisor: true}
+duration_s: 16.0
+faults: [overcurrent, command_timeout, encoder_dropout, localization_stale, imu_bias]
+requirements:
+  nominal_cross_track_rmse_m: 0.05
+  wheel_speed_relative_error: 0.05
+  finite_states: true
+  fault_disable_max_s: 0.002
+  slip_improvement_hypothesis_percent: 20
+
