@@ -113,6 +113,11 @@ def board():
         lib,name=part["fp"].split(":");fp=k.FootprintLoad(str(footprint_root/(lib+".pretty")),name)
         if fp is None:raise RuntimeError("Missing footprint "+part["fp"]+"; available Pico footprints: "+str(list(footprint_root.glob("Module.pretty/*Pico*"))))
         fp.SetReference(part["ref"]);fp.SetValue(part["value"]);fp.SetPosition(k.VECTOR2I(k.FromMM(part["xy"][0]),k.FromMM(part["xy"][1])))
+        if part["ref"]=="U1":
+            # Library origins differ across editions. Center the two header rows.
+            main=[pad.GetPosition() for pad in fp.Pads() if pad.GetNumber().isdigit() and 1<=int(pad.GetNumber())<=40]
+            center=k.VECTOR2I((min(p.x for p in main)+max(p.x for p in main))//2,(min(p.y for p in main)+max(p.y for p in main))//2)
+            fp.SetPosition(fp.GetPosition()+k.VECTOR2I(k.FromMM(part["xy"][0]),k.FromMM(part["xy"][1]))-center)
         for pad in fp.Pads():
             name=part["pins"].get(pad.GetNumber())
             if name:pad.SetNet(nets[name])
@@ -120,8 +125,8 @@ def board():
         b.Add(fp)
     for a,z in [((2,2),(98,2)),((98,2),(98,98)),((98,98),(2,98)),((2,98),(2,2))]:
         edge=k.PCB_SHAPE();edge.SetShape(k.SHAPE_T_SEGMENT);edge.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1])));edge.SetEnd(k.VECTOR2I(k.FromMM(z[0]),k.FromMM(z[1])));edge.SetLayer(k.Edge_Cuts);edge.SetWidth(k.FromMM(.05));b.Add(edge)
-    grid=.5;N=201;occ=np.zeros((2,N,N),dtype=np.int32)
-    occ[:,:6,:]=-1;occ[:,-6:,:]=-1;occ[:,:,:6]=-1;occ[:,:,-6:]=-1
+    grid=.25;N=401;occ=np.zeros((2,N,N),dtype=np.int32)
+    occ[:,:12,:]=-1;occ[:,-12:,:]=-1;occ[:,:,:12]=-1;occ[:,:,-12:]=-1
     def coord(pos):return (round(k.ToMM(pos.x)/grid),round(k.ToMM(pos.y)/grid))
     for pad in padlist:
         pos=pad.GetPosition();x,y=coord(pos);size=pad.GetSize()
@@ -157,7 +162,9 @@ def board():
                 cost[nxt]=ng;previous[nxt]=node
                 h=abs(xx-end[0])+abs(yy-end[1])+.5*(ll!=end[2])
                 heapq.heappush(queue,(ng+1.15*h,ng,nxt))
-        if end not in previous and end!=start:raise RuntimeError("Routing failed for net "+str(net))
+        if end not in previous and end!=start:
+            k.SaveBoard(str(OUT/"routing_debug.kicad_pcb"),b)
+            raise RuntimeError(f"Routing failed net {src.GetNetname()} from {src.GetParent().GetReference()}:{src.GetNumber()} {start} to {dest.GetParent().GetReference()}:{dest.GetNumber()} {end}; endpoint occupancy {occ[start[2],start[0],start[1]]}, {occ[end[2],end[0],end[1]]}")
         path=[end]
         while path[-1]!=start:path.append(previous[path[-1]])
         path.reverse()

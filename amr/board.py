@@ -9,14 +9,19 @@ class VirtualBoard:
     def __init__(self,dt=.001,delay=.01):
         self.dt=dt;self.queue=deque([(0.,0.)]*max(1,round(delay/dt)))
         self.command=(0.,0.);self.last_command=0.;self.enabled=True;self.reason=""
-        self.filtered_current=0.;self.fault_time=None;self.sense_gain=.1;self.tau=.001
+        self.filtered_channels=[0.,0.];self.adc_codes=[2048,2048]
+        self.filtered_current=0.;self.fault_time=None;self.sense_gain=.1;self.sense_offset=1.65;self.tau=.001
     def set_command(self,left,right,t):
         self.command=(left,right);self.last_command=t
     def tick(self,t,wl,wr,current,forced_current=None,stop=False):
-        sensed=max(abs(current[0]),abs(current[1])) if forced_current is None else forced_current
-        self.filtered_current += (1-math.exp(-self.dt/self.tau))*(sensed-self.filtered_current)
-        adc=round(min(3.3,self.filtered_current*self.sense_gain)/3.3*4095)
-        reconstructed=adc*3.3/4095/self.sense_gain
+        channels=list(current) if forced_current is None else [forced_current,0.]
+        sensed=max(abs(x) for x in channels)
+        for i,value in enumerate(channels):
+            self.filtered_channels[i]+=(1-math.exp(-self.dt/self.tau))*(value-self.filtered_channels[i])
+            voltage=max(0.,min(3.3,self.sense_offset+self.filtered_channels[i]*self.sense_gain))
+            self.adc_codes[i]=round(voltage/3.3*4095)
+        reconstructed=max(abs((code*3.3/4095-self.sense_offset)/self.sense_gain) for code in self.adc_codes)
+        self.filtered_current=max(abs(x) for x in self.filtered_channels)
         raw_trip=sensed>=16. # independent comparator before RC/ADC path
         if self.enabled and (raw_trip or stop or t-self.last_command>.1000001):
             self.enabled=False;self.fault_time=t

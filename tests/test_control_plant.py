@@ -51,6 +51,22 @@ def test_command_timeout_disables_drive():
     b.tick(.101,0,0,[0,0])
     assert not b.enabled and b.reason=="command_timeout"
 
+def test_signed_centered_current_adc_and_rc():
+    b=VirtualBoard();b.set_command(0,0,0)
+    b.tick(.001,0,0,[10,-10])
+    assert abs(b.filtered_channels[0]-10*(1-math.exp(-1)))<1e-10
+    for i in range(2,20):b.tick(i*.001,0,0,[10,-10])
+    assert abs(b.adc_codes[0]*3.3/4095-2.65)<.001
+    assert abs(b.adc_codes[1]*3.3/4095-.65)<.001
+    assert b.enabled
+
+def test_board_delay_and_pwm_quantization():
+    b=VirtualBoard();b.set_command(.12,.12,0)
+    for i in range(10):assert b.tick(i*.001,0,0,[0,0])[:2]==(0,0)
+    duty=b.tick(.010,0,0,[0,0])[0]
+    assert abs(duty-.0625)<1/4095
+    assert abs(duty*4095-round(duty*4095))<1e-10
+
 def test_native_antiwindup_recovers():
     integral=c.c_double()
     for _ in range(1000):core.wheel_pi(100,0,.005,1,c.byref(integral))
