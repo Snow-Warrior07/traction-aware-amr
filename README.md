@@ -4,6 +4,26 @@ An entirely virtual control-engineering project: a differential-drive rover, lin
 
 The plant models independent wheel/body velocity, motor current, payload and friction-limited contact. A noisy delayed pose sensor plus wheel encoders and IMU feeds the estimator. Simulator truth is used only for sensor generation and evaluation.
 
+**[Open the interactive demo](https://snow-warrior07.github.io/traction-aware-amr/)** · [Phase results](docs/PHASE_RESULTS.md) · [Download KiCad project](https://snow-warrior07.github.io/traction-aware-amr/downloads/traction-aware-amr-kicad.zip) · [PDF report](https://snow-warrior07.github.io/traction-aware-amr/downloads/phase-report.pdf)
+
+![Actual KiCad 10 render of the verified Pico carrier](site/assets/carrier-isometric.png)
+
+The demo includes four-controller recorded playback, supervisor-off overlays, filters across 540 measured scenarios, actual PCB/schematic views, ROS and Gazebo evidence, fault/timing tables, and a narrated video with captions. It runs entirely in the browser; physical hardware is unnecessary.
+
+Local KiCad 10.0.6 checks: **zero ERC violations, zero DRC violations, zero unconnected items, and zero schematic/PCB parity issues**. The 29-component board has 29 connected signal/power nets plus 18 single-pad no-connect nets. Source, project libraries, Gerbers, drills, netlist, renders, and board STEP are included. On the development computer the editable project is also on the Desktop in `TractionAwareAMR-KiCad/traction_carrier.kicad_pro`.
+
+All 540 routes completed. Low-traction integrated-slip reduction was 18.76% for LQR and 18.48% for nonlinear tracking; the 20% hypothesis was not met. Four recorded soft real-time runs had zero 20 ms compute misses. Five injected faults disabled the drive. The corrected Gazebo torque/contact test passed separately from the mathematical-plant study; saved evidence is in `results/gazebo_smoke.json`.
+
+GitHub verification tests are manual at the user's request. Prior failed runs are retained. GitHub Pages publication runs independently; no green CI badge is used as an engineering claim.
+
+## Preview the website
+
+```bash
+python -m http.server 8080 --bind 127.0.0.1 --directory site
+```
+
+Open `http://127.0.0.1:8080/`. The website uses static HTML/CSS/JavaScript and saved JSON data; no backend or account is needed. If Windows reserves this port, use `0` instead and open the assigned port printed by Python. Package downloads/assets using `python tools/package_delivery.py` after generating the report/video. See `requirements-demo.txt` for authoring dependencies.
+
 ## Run locally
 
 Use Python 3.12 and a 64-bit C++ compiler. Linux is the simplest reproduction environment. The Windows development host used MATLAB R2024b's installed LCC64 with the same C-compatible C++ source because its MinGW installation is 32-bit. Windows runtime math functions are bound explicitly; Linux uses standard libm.
@@ -32,7 +52,7 @@ On Windows, use `.venv\Scripts\python.exe` for the Python commands. The native l
 7. Regression, faults, live timing and standards mapping: tests, saved results, phase report.
 8. GitHub verification and public release: Actions artifacts and static demonstration.
 
-Each phase is reported from executed evidence. A source file alone does not establish an unexecuted check as passing. The public repository may show work in progress until the verification workflow and final evidence audit complete.
+Each phase is reported from executed evidence in `docs/PHASE_RESULTS.md`. Website playback replays recorded measurements; it does not execute ROS or KiCad in the browser.
 
 ## Controller comparison
 

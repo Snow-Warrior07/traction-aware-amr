@@ -1,0 +1,6 @@
+# Optional local video/PDF authoring dependencies; core simulation uses requirements.txt.
+imageio-ffmpeg==0.6.0
+reportlab==5.0.1
+pypdf==6.19.0
+comtypes==1.4.17; sys_platform == 'win32'
+Pillow==12.3.0

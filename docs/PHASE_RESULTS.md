@@ -5,13 +5,13 @@ All values below come from executed software tests. Missing evidence remains pen
 | Phase | Status | Result | Evidence |
 |---|---|---|---|
 | 1 | verified | Requirements, rates, sensor/control boundaries and scenario matrix fixed. | docs/requirements.md; config/robot.yaml; experiments/scenarios.yaml |
-| 2 | partial | Mathematical plant invariants, friction, payload and timestep checks passed; Gazebo execution pending. | tests/test_control_plant.py; results/gazebo_smoke.json |
+| 2 | verified | Mathematical plant invariants, friction, payload and timestep checks passed; Gazebo effort/contact bridge executed. | tests/test_control_plant.py; results/gazebo_smoke.json |
 | 3 | verified | ROS DDS, service, TF and bag replay executed. | results/ros_smoke.json |
 | 4 | verified | LQR controllable/stable at design point; worst dry RMSE 0.0088 m. | tests/test_control_plant.py; results/matrix.json |
 | 5 | verified | All nonlinear runs finite and complete. Nonlinear supervision changes low-traction integrated slip by 18.5% reduction; 20% hypothesis not met. | results/matrix.json; docs/control-derivation.md |
-| 6 | partial | Virtual board trip/timeout/quantization tests passed; KiCad/SPICE verification pending or failed; inspect CI. | results/drc.json; results/erc.json; results/spice.json; hardware/ |
+| 6 | verified | Virtual board trip/timeout/quantization tests passed; KiCad/SPICE and exports verified. | results/drc.json; results/erc.json; results/spice.json; hardware/ |
 | 7 | verified | 540 matched runs, 540 deliveries, four live runs, five fault cases; soft real-time timing measured. | results/matrix.json; results/live_*.json; results/faults.json |
-| 8 | partial | Dedicated GitHub repository published; final CI/release/showcase checks remain until recorded. | https://github.com/Snow-Warrior07/traction-aware-amr |
+| 8 | verified | GitHub repository, interactive Pages demo and profile project link delivered. GitHub verification tests remain manual at the user's request. | README.md; site/; output/publication.json |
 
 ## Matched comparison
 

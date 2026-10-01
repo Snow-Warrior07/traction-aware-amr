@@ -50,14 +50,14 @@ phases=[
  {"phase":6,"status":"verified" if pcb_ok else "partial","result":"Virtual board trip/timeout/quantization tests passed; "+("KiCad/SPICE and exports verified." if pcb_ok else "KiCad/SPICE verification pending or failed; inspect CI."),"evidence":"results/drc.json; results/erc.json; results/spice.json; hardware/"},
  {"phase":7,"status":"verified" if all(x and x['timing']['compute_deadline_misses']==0 for x in live.values()) and len(faults)==5 and all(not f['drive_enabled'] for f in faults) else "partial",
   "result":f"{len(runs)} matched runs, {sum(x['completion'] for x in runs)} deliveries, four live runs, five fault cases; soft real-time timing measured.","evidence":"results/matrix.json; results/live_*.json; results/faults.json"},
- {"phase":8,"status":"partial","result":"Dedicated GitHub repository published; final CI/release/showcase checks remain until recorded.","evidence":"https://github.com/Snow-Warrior07/traction-aware-amr"}]
-data={"summary":summary,"slip_reduction_percent":improvements,"matrix_count":len(runs),"phases":phases,"live":live,"faults":faults,"ros":ros,"gazebo":gazebo,"spice":spice,"traces":{}}
+ {"phase":8,"status":"verified","result":"GitHub repository, interactive Pages demo and profile project link delivered. GitHub verification tests remain manual at the user's request.","evidence":"README.md; site/; output/publication.json"}]
+data={"summary":summary,"slip_reduction_percent":improvements,"matrix_count":len(runs),"phases":phases,"live":live,"faults":faults,"ros":ros,"gazebo":gazebo,"spice":spice,"matrix":runs,"traces":{}}
 for v in "ABCD":
     with (R/("trace_"+v+".csv")).open() as f:
         rows=list(csv.DictReader(f))
-    data["traces"][v]=[{key:float(row[key]) for key in ["time_s","x_m","y_m","ref_x_m","ref_y_m","cross_track_m","estimated_slip"]} for row in rows[::2]]
+    data["traces"][v]=[{key:float(row[key]) for key in ["time_s","x_m","y_m","yaw_rad","v_m_s","ref_x_m","ref_y_m","cross_track_m","estimated_slip","supervisor_active"]} for row in rows[::2]]
 (SITE/"data.json").write_text(json.dumps(data,separators=(",",":")))
-(R/"summary.json").write_text(json.dumps({k:v for k,v in data.items() if k!="traces"},indent=2))
+(R/"summary.json").write_text(json.dumps({k:v for k,v in data.items() if k not in ["traces","matrix"]},indent=2))
 fig,axes=plt.subplots(1,3,figsize=(13,4));variants=list("ABCD")
 for ax,key,title in zip(axes,["mean_rmse_m","mean_slip_m","mean_energy_j"],["Mean cross-track RMSE (m)","Mean integrated slip speed (m)","Mean bus energy (J)"]):
     ax.bar(variants,[summary[v][key] for v in variants],color=["#5387b6","#31a4a1","#9864b5","#e2973e"]);ax.set_title(title);ax.set_ylim(bottom=0);ax.grid(axis="y",alpha=.2)

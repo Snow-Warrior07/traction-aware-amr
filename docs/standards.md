@@ -11,7 +11,7 @@ This is a virtual engineering demonstrator. No formal compliance, safety perform
 | [ISO 13849-1](https://www.iso.org/standard/73481.html) | Separate safety-related fault response from ordinary commands | Independent simulated gate and PCB latch; no PL/SIL claim or certified component selection |
 | [ROS REP 103](https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst) / [REP 105](https://github.com/ros-infrastructure/rep/blob/master/rep-0105.rst) | SI units and coordinate-frame ownership | map -> odom -> base_link, named wheel joints, timestamped messages |
 
-Full paid standard texts were not reviewed. This mapping identifies applicable scopes and engineering intent, rather than clause-by-clause conformity. Verify current editions and local regulatory applicability for an actual product.
+Public scope references were checked on 2 October 2026: ISO 12100:2010, ISO 3691-4:2023 and ISO 13849-1:2023 are the published editions shown by ISO; draft successors are listed for the first two. IPC's official design-standards catalog identifies IPC-2221 and IPC-2152 for board design and conductor-current considerations. Full paid standard texts were not reviewed. This mapping identifies applicable scopes and engineering intent, rather than clause-by-clause conformity. Verify current editions and local regulatory applicability for an actual product.
 
 | Hazard in a future physical rover | Simulated reduction/test | Remaining limitation |
 |---|---|---|

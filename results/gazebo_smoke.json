@@ -1,0 +1,24 @@
+[
+  {
+    "case": "warehouse",
+    "odom_messages": 127,
+    "wheel_messages": 1753,
+    "displacement_m": 1.335103582868423,
+    "body_speed_m_s": 2.0676780152799825,
+    "wheel_speed_rad_s": 31.93441374339622,
+    "wheel_body_divergence_m_s": 0.3274030154747338,
+    "ros_gazebo_bridge": true,
+    "effort_nm": 0.8
+  },
+  {
+    "case": "warehouse_low_friction",
+    "odom_messages": 4691,
+    "wheel_messages": 5026,
+    "displacement_m": 0.7049973738409712,
+    "body_speed_m_s": 1.1400744818484736,
+    "wheel_speed_rad_s": 126.11811845341089,
+    "wheel_body_divergence_m_s": 8.318784402157341,
+    "ros_gazebo_bridge": true,
+    "effort_nm": 0.8
+  }
+]

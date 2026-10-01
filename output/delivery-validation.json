@@ -1,0 +1,17 @@
+{
+  "video": "C:\\Users\\Abhitesh\\OneDrive\\Desktop\\GITF\\traction-aware-amr\\output\\video\\traction-aware-amr-demo.mp4",
+  "duration_s": 341.9,
+  "video_frames": 6838,
+  "resolution": "1280x720",
+  "fps": 20,
+  "video_codec": "H.264",
+  "audio_codec": "AAC",
+  "english_subtitle_track": true,
+  "chapter_navigation": 12,
+  "complete_decode": "passed",
+  "narration_audio_seconds": 341.9000453514739,
+  "pdf_pages": 8,
+  "pdf_text_check": "passed",
+  "video_sha256": "ab26a8a9a85d4976b3268e952e06410a8a542d055ea1dd5e1af13a736c71260c",
+  "pdf_sha256": "dce2c32ffd2817dfd4b84149d8365ddc72982c67fda3355c9f4e28e8a81ff58e"
+}

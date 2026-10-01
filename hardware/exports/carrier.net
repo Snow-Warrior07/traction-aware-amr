@@ -1,0 +1,3992 @@
+(export
+	(version "E")
+	(design
+		(source "C:\\Users\\Abhitesh\\OneDrive\\Desktop\\GITF\\traction-aware-amr\\hardware\\kicad\\traction_carrier.kicad_sch")
+		(date "2026-10-02T00:37:48")
+		(tool "Eeschema 10.0.6")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "traction_carrier.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "1u")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C1")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ff825e33-94c4-46ad-809a-a33845f7efea")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "1u")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C2")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d4e35a73-07ed-4724-ad60-a8b941a11e34")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C3")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1e781d54-0742-4ec1-afbc-24406492f5ba")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C4")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c0b14735-3914-46fb-8f59-3443039fe1a1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "10u")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C5")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c7f2ccda-402c-445d-a11f-dc908b83852a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C6")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0eaeed4b-dab5-4cbc-9b41-deeb9481b52e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C7")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "22017177-1ad8-4c0a-9884-688b76e4275a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C8")
+			(value "100n")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "C8")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "711a9462-3975-40b1-97f4-df3f2a0416a8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "5V power / 24V sense")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "J1")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6ab4664c-9ea6-4551-ad2e-899d179f4040")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "LEFT DRIVER")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "J2")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ae35acac-7473-4d13-bc7d-f78ee6ee3c20")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J3")
+			(value "RIGHT DRIVER")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "J3")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ca249bc5-cf09-4661-8f58-3b6b945f657a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J4")
+			(value "LEFT ENCODER")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "J4")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c0ae7e40-aa01-44a0-9cd2-27cc1699cf6e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J5")
+			(value "RIGHT ENCODER")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "J5")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "152b4823-f9a6-4370-ae40-848cf36e821e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J6")
+			(value "3V3 IMU")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "J6")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "af0b1c39-0d92-4030-864c-eeb54b72fdc2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J7")
+			(value "UART DEBUG")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+			(fields
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "J7")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9e23bfa3-8d0d-41d3-bc39-79fb48105298")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "1k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R1")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0af542e2-0407-4335-b78b-705412766b7b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "1k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R2")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0f7f8d36-cc23-47ab-82da-d132934abfd5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R3")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fc558de0-6fbd-4330-8567-fff92223bef2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R4")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R4")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f36b2218-84a5-461d-be59-f0832e36df1c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R5")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R5")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4fa86a77-7352-4daa-a2b0-51263e596b64")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R6")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R6")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e558a40f-b617-4215-818c-fca2d251e424")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R7")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R7")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a496d123-2744-4ef8-b1f4-fffdb0be7f9a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R8")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R8")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b90f8b5a-3132-4f79-a37d-0f2dbf93986f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R9")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R9")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2c8ed356-062c-46b5-9c8a-74223c37eeb8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R10")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "R10")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e50a9bda-8a44-448a-8aa8-6fce71e90502")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW1")
+			(value "Manual drive reset")
+			(footprint "Button_Switch_THT:SW_PUSH_6mm_H4.3mm")
+			(fields
+				(field
+					(name "Footprint") "Button_Switch_THT:SW_PUSH_6mm_H4.3mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "SW1")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6e6e9625-686f-4fd9-a327-c3ff1e3e3c2c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "Raspberry Pi Pico RP2040")
+			(footprint "Module:RaspberryPi_Pico_Common_THT")
+			(fields
+				(field
+					(name "Footprint") "Module:RaspberryPi_Pico_Common_THT")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "U1")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2190209b-df4e-4f06-bc0b-e830314f2eb3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "29")
+						)
+						(pin
+							(num "30")
+						)
+						(pin
+							(num "31")
+						)
+						(pin
+							(num "32")
+						)
+						(pin
+							(num "33")
+						)
+						(pin
+							(num "34")
+						)
+						(pin
+							(num "35")
+						)
+						(pin
+							(num "36")
+						)
+						(pin
+							(num "37")
+						)
+						(pin
+							(num "38")
+						)
+						(pin
+							(num "39")
+						)
+						(pin
+							(num "40")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "74HC08 AND gate")
+			(footprint "Package_DIP:DIP-14_W7.62mm")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-14_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "U2")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ec889acf-623a-4cc1-9f84-fdf3bc468a47")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U3")
+			(value "74HC74 fault latch")
+			(footprint "Package_DIP:DIP-14_W7.62mm")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-14_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "AMR")
+				(part "U3")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "traction_carrier")
+			)
+			(property
+				(name "Sheetfile")
+				(value "traction_carrier.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "64295c6f-6f1f-4dc2-8130-f8dda3860021")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "AMR")
+			(part "C1")
+			(fields
+				(field
+					(name "Reference") "C1")
+				(field
+					(name "Value") "1u")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ADC_CURRENT_L")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "C2")
+			(fields
+				(field
+					(name "Reference") "C2")
+				(field
+					(name "Value") "1u")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ADC_CURRENT_R")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "C3")
+			(fields
+				(field
+					(name "Reference") "C3")
+				(field
+					(name "Value") "100n")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ADC_BUS")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "C4")
+			(fields
+				(field
+					(name "Reference") "C4")
+				(field
+					(name "Value") "100n")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "C5")
+			(fields
+				(field
+					(name "Reference") "C5")
+				(field
+					(name "Value") "10u")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "5V")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "C6")
+			(fields
+				(field
+					(name "Reference") "C6")
+				(field
+					(name "Value") "100n")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "C7")
+			(fields
+				(field
+					(name "Reference") "C7")
+				(field
+					(name "Value") "100n")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "C8")
+			(fields
+				(field
+					(name "Reference") "C8")
+				(field
+					(name "Value") "100n")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ADC_VREF")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "J1")
+			(fields
+				(field
+					(name "Reference") "J1")
+				(field
+					(name "Value") "5V power / 24V sense")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "5V")
+					(type "power_out")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "power_out")
+				)
+				(pin
+					(num "3")
+					(name "BUS_24V")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "J2")
+			(fields
+				(field
+					(name "Reference") "J2")
+				(field
+					(name "Value") "LEFT DRIVER")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "PWM_L")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "DIR_L")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "DRIVE_ENABLE")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "ISENSE_L")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "FAULT_L_N")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "J3")
+			(fields
+				(field
+					(name "Reference") "J3")
+				(field
+					(name "Value") "RIGHT DRIVER")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "PWM_R")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "DIR_R")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "DRIVE_ENABLE")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "ISENSE_R")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "FAULT_R_N")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "J4")
+			(fields
+				(field
+					(name "Reference") "J4")
+				(field
+					(name "Value") "LEFT ENCODER")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "ENC_L_A")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "ENC_L_B")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "J5")
+			(fields
+				(field
+					(name "Reference") "J5")
+				(field
+					(name "Value") "RIGHT ENCODER")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "ENC_R_A")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "ENC_R_B")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "J6")
+			(fields
+				(field
+					(name "Reference") "J6")
+				(field
+					(name "Value") "3V3 IMU")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "SDA")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "SCL")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "J7")
+			(fields
+				(field
+					(name "Reference") "J7")
+				(field
+					(name "Value") "UART DEBUG")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "UART_TX")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "UART_RX")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R1")
+			(fields
+				(field
+					(name "Reference") "R1")
+				(field
+					(name "Value") "1k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ISENSE_L")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "ADC_CURRENT_L")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R10")
+			(fields
+				(field
+					(name "Reference") "R10")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "FAULT_R_N")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R2")
+			(fields
+				(field
+					(name "Reference") "R2")
+				(field
+					(name "Value") "1k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ISENSE_R")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "ADC_CURRENT_R")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R3")
+			(fields
+				(field
+					(name "Reference") "R3")
+				(field
+					(name "Value") "100k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "BUS_24V")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "ADC_BUS")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R4")
+			(fields
+				(field
+					(name "Reference") "R4")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ADC_BUS")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R5")
+			(fields
+				(field
+					(name "Reference") "R5")
+				(field
+					(name "Value") "2.2k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "SDA")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R6")
+			(fields
+				(field
+					(name "Reference") "R6")
+				(field
+					(name "Value") "2.2k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "SCL")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R7")
+			(fields
+				(field
+					(name "Reference") "R7")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "RESET_CLOCK")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R8")
+			(fields
+				(field
+					(name "Reference") "R8")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "MCU_ENABLE")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "R9")
+			(fields
+				(field
+					(name "Reference") "R9")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "FAULT_L_N")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "SW1")
+			(fields
+				(field
+					(name "Reference") "SW1")
+				(field
+					(name "Value") "Manual drive reset")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "RESET_CLOCK")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "U1")
+			(fields
+				(field
+					(name "Reference") "U1")
+				(field
+					(name "Value") "Raspberry Pi Pico RP2040")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "UART_TX")
+					(type "bidirectional")
+				)
+				(pin
+					(num "2")
+					(name "UART_RX")
+					(type "bidirectional")
+				)
+				(pin
+					(num "3")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "4")
+					(name "ENC_L_A")
+					(type "bidirectional")
+				)
+				(pin
+					(num "5")
+					(name "ENC_L_B")
+					(type "bidirectional")
+				)
+				(pin
+					(num "6")
+					(name "SDA")
+					(type "bidirectional")
+				)
+				(pin
+					(num "7")
+					(name "SCL")
+					(type "bidirectional")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "ENC_R_A")
+					(type "bidirectional")
+				)
+				(pin
+					(num "10")
+					(name "ENC_R_B")
+					(type "bidirectional")
+				)
+				(pin
+					(num "11")
+					(name "PWM_L")
+					(type "bidirectional")
+				)
+				(pin
+					(num "12")
+					(name "DIR_L")
+					(type "bidirectional")
+				)
+				(pin
+					(num "13")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "14")
+					(name "PWM_R")
+					(type "bidirectional")
+				)
+				(pin
+					(num "15")
+					(name "DIR_R")
+					(type "bidirectional")
+				)
+				(pin
+					(num "16")
+					(name "MCU_ENABLE")
+					(type "bidirectional")
+				)
+				(pin
+					(num "17")
+					(name "NC_17")
+					(type "bidirectional")
+				)
+				(pin
+					(num "18")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "19")
+					(name "NC_19")
+					(type "bidirectional")
+				)
+				(pin
+					(num "20")
+					(name "NC_20")
+					(type "bidirectional")
+				)
+				(pin
+					(num "21")
+					(name "NC_21")
+					(type "bidirectional")
+				)
+				(pin
+					(num "22")
+					(name "NC_22")
+					(type "bidirectional")
+				)
+				(pin
+					(num "23")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "24")
+					(name "NC_24")
+					(type "bidirectional")
+				)
+				(pin
+					(num "25")
+					(name "NC_25")
+					(type "bidirectional")
+				)
+				(pin
+					(num "26")
+					(name "NC_26")
+					(type "bidirectional")
+				)
+				(pin
+					(num "27")
+					(name "NC_27")
+					(type "bidirectional")
+				)
+				(pin
+					(num "28")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "29")
+					(name "NC_29")
+					(type "bidirectional")
+				)
+				(pin
+					(num "30")
+					(name "NC_30")
+					(type "bidirectional")
+				)
+				(pin
+					(num "31")
+					(name "ADC_CURRENT_L")
+					(type "bidirectional")
+				)
+				(pin
+					(num "32")
+					(name "ADC_CURRENT_R")
+					(type "bidirectional")
+				)
+				(pin
+					(num "33")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "34")
+					(name "ADC_BUS")
+					(type "bidirectional")
+				)
+				(pin
+					(num "35")
+					(name "ADC_VREF")
+					(type "bidirectional")
+				)
+				(pin
+					(num "36")
+					(name "3V3")
+					(type "power_out")
+				)
+				(pin
+					(num "37")
+					(name "NC_37")
+					(type "bidirectional")
+				)
+				(pin
+					(num "38")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "39")
+					(name "5V")
+					(type "power_in")
+				)
+				(pin
+					(num "40")
+					(name "NC_40")
+					(type "bidirectional")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "U2")
+			(fields
+				(field
+					(name "Reference") "U2")
+				(field
+					(name "Value") "74HC08 AND gate")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "FAULT_L_N")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "FAULT_R_N")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "FAULT_OK")
+					(type "output")
+				)
+				(pin
+					(num "4")
+					(name "MCU_ENABLE")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "ARMED")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "DRIVE_ENABLE")
+					(type "output")
+				)
+				(pin
+					(num "7")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "8")
+					(name "NC_8")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "GND")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "GND")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "NC_11")
+					(type "output")
+				)
+				(pin
+					(num "12")
+					(name "GND")
+					(type "input")
+				)
+				(pin
+					(num "13")
+					(name "GND")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "3V3")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "AMR")
+			(part "U3")
+			(fields
+				(field
+					(name "Reference") "U3")
+				(field
+					(name "Value") "74HC74 fault latch")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "FAULT_OK")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "3V3")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "RESET_CLOCK")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "3V3")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "ARMED")
+					(type "output")
+				)
+				(pin
+					(num "6")
+					(name "NC_6")
+					(type "output")
+				)
+				(pin
+					(num "7")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "8")
+					(name "NC_8")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "NC_9")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "3V3")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "GND")
+					(type "input")
+				)
+				(pin
+					(num "12")
+					(name "GND")
+					(type "input")
+				)
+				(pin
+					(num "13")
+					(name "GND")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "3V3")
+					(type "power_in")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "AMR")
+			(uri "${KIPRJMOD}/AMR.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/3V3")
+			(class "Default")
+			(node
+				(ref "C4")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J5")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J6")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J7")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW1")
+				(pin "1")
+				(pinfunction "3V3_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "36")
+				(pinfunction "3V3_36")
+				(pintype "power_out")
+			)
+			(node
+				(ref "U2")
+				(pin "14")
+				(pinfunction "3V3_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U3")
+				(pin "10")
+				(pinfunction "3V3_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U3")
+				(pin "14")
+				(pinfunction "3V3_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U3")
+				(pin "2")
+				(pinfunction "3V3_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U3")
+				(pin "4")
+				(pinfunction "3V3_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "2")
+			(name "/5V")
+			(class "Default")
+			(node
+				(ref "C5")
+				(pin "1")
+				(pinfunction "5V_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "1")
+				(pinfunction "5V_1")
+				(pintype "power_out")
+			)
+			(node
+				(ref "U1")
+				(pin "39")
+				(pinfunction "5V_39")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "3")
+			(name "/ADC_BUS")
+			(class "Default")
+			(node
+				(ref "C3")
+				(pin "1")
+				(pinfunction "ADC_BUS_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "2")
+				(pinfunction "ADC_BUS_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "1")
+				(pinfunction "ADC_BUS_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "34")
+				(pinfunction "ADC_BUS_34")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "4")
+			(name "/ADC_CURRENT_L")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pinfunction "ADC_CURRENT_L_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pinfunction "ADC_CURRENT_L_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "31")
+				(pinfunction "ADC_CURRENT_L_31")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "5")
+			(name "/ADC_CURRENT_R")
+			(class "Default")
+			(node
+				(ref "C2")
+				(pin "1")
+				(pinfunction "ADC_CURRENT_R_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pinfunction "ADC_CURRENT_R_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "32")
+				(pinfunction "ADC_CURRENT_R_32")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "6")
+			(name "/ADC_VREF")
+			(class "Default")
+			(node
+				(ref "C8")
+				(pin "1")
+				(pinfunction "ADC_VREF_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "35")
+				(pinfunction "ADC_VREF_35")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "7")
+			(name "/ARMED")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "ARMED_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U3")
+				(pin "5")
+				(pinfunction "ARMED_5")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "8")
+			(name "/BUS_24V")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "3")
+				(pinfunction "BUS_24V_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "1")
+				(pinfunction "BUS_24V_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "/DIR_L")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "DIR_L_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "12")
+				(pinfunction "DIR_L_12")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "10")
+			(name "/DIR_R")
+			(class "Default")
+			(node
+				(ref "J3")
+				(pin "2")
+				(pinfunction "DIR_R_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "15")
+				(pinfunction "DIR_R_15")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "11")
+			(name "/DRIVE_ENABLE")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "3")
+				(pinfunction "DRIVE_ENABLE_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "3")
+				(pinfunction "DRIVE_ENABLE_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "6")
+				(pinfunction "DRIVE_ENABLE_6")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "12")
+			(name "/ENC_L_A")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "3")
+				(pinfunction "ENC_L_A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "ENC_L_A_4")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "13")
+			(name "/ENC_L_B")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "4")
+				(pinfunction "ENC_L_B_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "ENC_L_B_5")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "14")
+			(name "/ENC_R_A")
+			(class "Default")
+			(node
+				(ref "J5")
+				(pin "3")
+				(pinfunction "ENC_R_A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "ENC_R_A_9")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "15")
+			(name "/ENC_R_B")
+			(class "Default")
+			(node
+				(ref "J5")
+				(pin "4")
+				(pinfunction "ENC_R_B_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "10")
+				(pinfunction "ENC_R_B_10")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "16")
+			(name "/FAULT_L_N")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "6")
+				(pinfunction "FAULT_L_N_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "2")
+				(pinfunction "FAULT_L_N_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "FAULT_L_N_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "17")
+			(name "/FAULT_OK")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "FAULT_OK_3")
+				(pintype "output")
+			)
+			(node
+				(ref "U3")
+				(pin "1")
+				(pinfunction "FAULT_OK_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "18")
+			(name "/FAULT_R_N")
+			(class "Default")
+			(node
+				(ref "J3")
+				(pin "6")
+				(pinfunction "FAULT_R_N_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "2")
+				(pinfunction "FAULT_R_N_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "FAULT_R_N_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "19")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C8")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "power_out")
+			)
+			(node
+				(ref "J2")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J5")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J6")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J7")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R7")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "13")
+				(pinfunction "GND_13")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "18")
+				(pinfunction "GND_18")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "23")
+				(pinfunction "GND_23")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "28")
+				(pinfunction "GND_28")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "33")
+				(pinfunction "GND_33")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "38")
+				(pinfunction "GND_38")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "12")
+				(pinfunction "GND_12")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "13")
+				(pinfunction "GND_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "9")
+				(pinfunction "GND_9")
+				(pintype "input")
+			)
+			(node
+				(ref "U3")
+				(pin "11")
+				(pinfunction "GND_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U3")
+				(pin "12")
+				(pinfunction "GND_12")
+				(pintype "input")
+			)
+			(node
+				(ref "U3")
+				(pin "13")
+				(pinfunction "GND_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U3")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "20")
+			(name "/ISENSE_L")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "5")
+				(pinfunction "ISENSE_L_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "1")
+				(pinfunction "ISENSE_L_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "/ISENSE_R")
+			(class "Default")
+			(node
+				(ref "J3")
+				(pin "5")
+				(pinfunction "ISENSE_R_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "1")
+				(pinfunction "ISENSE_R_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "/MCU_ENABLE")
+			(class "Default")
+			(node
+				(ref "R8")
+				(pin "1")
+				(pinfunction "MCU_ENABLE_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "16")
+				(pinfunction "MCU_ENABLE_16")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "MCU_ENABLE_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "23")
+			(name "/PWM_L")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "PWM_L_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "11")
+				(pinfunction "PWM_L_11")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "24")
+			(name "/PWM_R")
+			(class "Default")
+			(node
+				(ref "J3")
+				(pin "1")
+				(pinfunction "PWM_R_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "14")
+				(pinfunction "PWM_R_14")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "25")
+			(name "/RESET_CLOCK")
+			(class "Default")
+			(node
+				(ref "R7")
+				(pin "1")
+				(pinfunction "RESET_CLOCK_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW1")
+				(pin "2")
+				(pinfunction "RESET_CLOCK_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "3")
+				(pinfunction "RESET_CLOCK_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "26")
+			(name "/SCL")
+			(class "Default")
+			(node
+				(ref "J6")
+				(pin "4")
+				(pinfunction "SCL_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "2")
+				(pinfunction "SCL_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "SCL_7")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "27")
+			(name "/SDA")
+			(class "Default")
+			(node
+				(ref "J6")
+				(pin "3")
+				(pinfunction "SDA_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "2")
+				(pinfunction "SDA_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "SDA_6")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "28")
+			(name "/UART_RX")
+			(class "Default")
+			(node
+				(ref "J7")
+				(pin "4")
+				(pinfunction "UART_RX_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "UART_RX_2")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "29")
+			(name "/UART_TX")
+			(class "Default")
+			(node
+				(ref "J7")
+				(pin "3")
+				(pinfunction "UART_TX_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "UART_TX_1")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "30")
+			(name "unconnected-(U1-NC_17-Pad17)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "17")
+				(pinfunction "NC_17_17")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "31")
+			(name "unconnected-(U1-NC_19-Pad19)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "19")
+				(pinfunction "NC_19_19")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "32")
+			(name "unconnected-(U1-NC_20-Pad20)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "20")
+				(pinfunction "NC_20_20")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "33")
+			(name "unconnected-(U1-NC_21-Pad21)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "21")
+				(pinfunction "NC_21_21")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "34")
+			(name "unconnected-(U1-NC_22-Pad22)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "22")
+				(pinfunction "NC_22_22")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "35")
+			(name "unconnected-(U1-NC_24-Pad24)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "24")
+				(pinfunction "NC_24_24")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "36")
+			(name "unconnected-(U1-NC_25-Pad25)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "25")
+				(pinfunction "NC_25_25")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "37")
+			(name "unconnected-(U1-NC_26-Pad26)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "26")
+				(pinfunction "NC_26_26")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "38")
+			(name "unconnected-(U1-NC_27-Pad27)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "27")
+				(pinfunction "NC_27_27")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "39")
+			(name "unconnected-(U1-NC_29-Pad29)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "29")
+				(pinfunction "NC_29_29")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "40")
+			(name "unconnected-(U1-NC_30-Pad30)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "30")
+				(pinfunction "NC_30_30")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "41")
+			(name "unconnected-(U1-NC_37-Pad37)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "37")
+				(pinfunction "NC_37_37")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "42")
+			(name "unconnected-(U1-NC_40-Pad40)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "40")
+				(pinfunction "NC_40_40")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "43")
+			(name "unconnected-(U2-NC_8-Pad8)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "8")
+				(pinfunction "NC_8_8")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "44")
+			(name "unconnected-(U2-NC_11-Pad11)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "11")
+				(pinfunction "NC_11_11")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "45")
+			(name "unconnected-(U3-NC_6-Pad6)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "6")
+				(pinfunction "NC_6_6")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "46")
+			(name "unconnected-(U3-NC_8-Pad8)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "8")
+				(pinfunction "NC_8_8")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "47")
+			(name "unconnected-(U3-NC_9-Pad9)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "9")
+				(pinfunction "NC_9_9")
+				(pintype "output+no_connect")
+			)
+		)
+	)
+)

@@ -1,0 +1,29 @@
+{
+  "browser": "Codex in-app Chromium browser",
+  "local_url": "http://127.0.0.1:57704/",
+  "controller_selection": "A/B/C/D and descriptions verified",
+  "play_pause": "Recorded time advanced to 5.44 s; pause verified",
+  "scrub_reset": "End reached 15.96 s; reset returned to 0",
+  "baseline_overlay": "Enabled for supervised variants; disabled for A/C",
+  "matrix_filters": "Patch, 5 kg, curved: 20 cases, 5 per controller",
+  "pcb_views": "Isometric, top and actual schematic loaded",
+  "mobile_layout": {
+    "viewport_requested": [
+      390,
+      844
+    ],
+    "document_width": 375,
+    "content_width": 375,
+    "overflow": false
+  },
+  "final_page": {
+    "phase_cards": 8,
+    "missing_images": 0,
+    "console_errors": 0,
+    "video_duration_s": 341.9,
+    "video_metadata_loaded": true
+  },
+  "downloads": "All linked local assets exist; both ZIPs passed archive integrity check",
+  "report": "8 pages; text and rendered layout verified",
+  "github_tests": "Not run; verification workflow manual at user request"
+}

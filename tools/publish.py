@@ -1,8 +1,10 @@
 """Create a dedicated repository and push only this project's files."""
 import subprocess
+import argparse
 from pathlib import Path
 from github_api import request
 root=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser();parser.add_argument('--message',default='Complete virtual PCB and publish interactive project demo');args=parser.parse_args()
 def git(*args,output=False):
     command=["git","-c","safe.directory="+root.as_posix(),*args]
     if output:return subprocess.check_output(command,cwd=root,text=True).strip()
@@ -24,6 +26,6 @@ elif git("remote","get-url","origin",output=True)!=existing["clone_url"]:raise R
 git("add",".")
 dirty=git("diff","--cached","--name-only",output=True)
 if dirty:
-    git("commit","-m","Implement phased rover simulation, controllers, virtual PCB and verification")
+    git("commit","-m",args.message)
 git("push","-u","origin","HEAD")
 print(existing["html_url"])

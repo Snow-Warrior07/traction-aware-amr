@@ -1,6 +1,5 @@
 name: Phase verification
 on:
-  push:
   workflow_dispatch:
 concurrency:
   group: verify-${{ github.ref }}

@@ -16,4 +16,5 @@ ros_ws/log/
 results/raw/
 results/*_bag/
 results/ci/**/ros_bag/
+output/desktop-delivery.json
 

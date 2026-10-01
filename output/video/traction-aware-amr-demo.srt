@@ -1,0 +1,219 @@
+1
+00:00:00,400 --> 00:00:04,000
+This is a fully virtual warehouse rover project.
+
+2
+00:00:04,000 --> 00:00:13,825
+It combines linear and nonlinear control, a friction-sensitive robot model, real ROS two messaging, and an editable controller PCB.
+
+3
+00:00:13,825 --> 00:00:17,275
+This demonstration uses recorded measurements.
+
+4
+00:00:17,275 --> 00:00:19,750
+No physical hardware is required.
+
+5
+00:00:20,950 --> 00:00:27,644
+The real-world problem is loss of traction when a loaded warehouse rover crosses a slippery patch.
+
+6
+00:00:27,644 --> 00:00:31,606
+Independent wheel and body dynamics model that difference.
+
+7
+00:00:31,606 --> 00:00:35,978
+A delayed pose sensor, encoders, and an IMU feed the controller.
+
+8
+00:00:35,978 --> 00:00:43,150
+Physics runs at one kilohertz, wheel control at two hundred hertz, and trajectory control at fifty hertz.
+
+9
+00:00:44,350 --> 00:00:50,462
+The linear controller uses an L Q R trajectory loop and inner wheel P I control with anti-windup.
+
+10
+00:00:50,462 --> 00:00:54,558
+This is a replay of the recorded sixteen second curved-route run.
+
+11
+00:00:54,558 --> 00:00:58,528
+The rover follows the reference through the traction challenge.
+
+12
+00:00:58,528 --> 00:01:07,350
+The moving-reference design is controllable and stable, and the worst dry-floor lateral error in the matrix is under nine millimeters R M S.
+
+13
+00:01:08,550 --> 00:01:13,323
+The nonlinear controller uses heading-dependent sine and cosine terms.
+
+14
+00:01:13,323 --> 00:01:19,186
+Its supervisor estimates slip from wheel speed and independent ground-speed estimates.
+
+15
+00:01:19,186 --> 00:01:24,709
+Persistent slip reduces acceleration and torque, then hysteresis allows recovery.
+
+16
+00:01:24,709 --> 00:01:28,391
+Here, both runs use the same reference and noise seed.
+
+17
+00:01:28,391 --> 00:01:34,050
+The supervisor is active only when the sensor-based traction estimate calls for it.
+
+18
+00:01:35,250 --> 00:01:43,473
+The comparison contains four controllers, three traction conditions, three payloads, three routes, and five noise seeds.
+
+19
+00:01:43,473 --> 00:01:46,351
+All five hundred and forty runs completed.
+
+20
+00:01:46,351 --> 00:01:56,424
+Supervision reduced low-traction integrated slip by eighteen point eight percent with L Q R and eighteen point five percent with nonlinear control.
+
+21
+00:01:56,424 --> 00:01:59,850
+The planned twenty percent hypothesis was not met.
+
+22
+00:02:01,050 --> 00:02:08,132
+The ROS test executed real publishers, subscribers, transforms, and a controller-selection service.
+
+23
+00:02:08,132 --> 00:02:15,071
+It recorded and replayed a ROS bag, receiving four hundred and thirty replayed odometry messages.
+
+24
+00:02:15,071 --> 00:02:20,651
+This diagram explains the tested graph; it is not a live ROS screen recording.
+
+25
+00:02:20,651 --> 00:02:26,517
+The corrected Gazebo model also received real wheel torque through the ROS bridge.
+
+26
+00:02:26,517 --> 00:02:34,600
+Both dry and low-friction cases moved the body, with increased wheel and body divergence on the slippery surface.
+
+27
+00:02:35,800 --> 00:02:41,703
+These are actual three-dimensional renders from the installed KiCad ten application.
+
+28
+00:02:41,703 --> 00:02:51,682
+The custom, two-layer Pico carrier connects external motor drivers, encoders, an IMU, current filters, and a latched drive authorization gate.
+
+29
+00:02:51,682 --> 00:02:55,266
+It has twenty-nine components and twenty-nine nets.
+
+30
+00:02:55,266 --> 00:03:04,191
+The repaired schematic and board have zero electrical rule violations, zero layout rule violations, and zero unconnected items.
+
+31
+00:03:04,191 --> 00:03:08,970
+Library keepouts, copper clearance, and drill spacing are respected.
+
+32
+00:03:08,970 --> 00:03:14,100
+The editable project and exports are included on the desktop and website.
+
+33
+00:03:15,300 --> 00:03:24,761
+Ngspice measured the current-sense filter time constant as one point zero zero one milliseconds, close to the one millisecond design value.
+
+34
+00:03:24,761 --> 00:03:29,322
+The external driver signal is centered at one point six five volts.
+
+35
+00:03:29,322 --> 00:03:39,600
+The virtual board includes signed twelve-bit current sensing, PWM quantization, command delay, an independent overcurrent trip, and a latched watchdog.
+
+36
+00:03:40,800 --> 00:03:49,133
+Five fault cases disable the drive: overcurrent, command timeout, encoder dropout, stale localization, and IMU bias.
+
+37
+00:03:49,133 --> 00:03:51,504
+The faults start at five seconds.
+
+38
+00:03:51,504 --> 00:03:57,753
+Qualification and timeout delays range from zero to one hundred and forty milliseconds.
+
+39
+00:03:57,753 --> 00:04:07,451
+Cutting drive power does not stop motion instantly: the modeled rover coasts between one point one zero and one point four four meters.
+
+40
+00:04:07,451 --> 00:04:09,750
+It has no emergency brake model.
+
+41
+00:04:10,950 --> 00:04:16,077
+Four local wall-clock-paced tests each ran for approximately sixteen seconds.
+
+42
+00:04:16,077 --> 00:04:21,336
+All met the twenty millisecond compute budget, with no compute deadline misses.
+
+43
+00:04:21,336 --> 00:04:26,929
+The worst ninety-ninth percentile compute time was two point one three milliseconds.
+
+44
+00:04:26,929 --> 00:04:32,188
+Compute duration and operating-system wake-up lateness are measured separately.
+
+45
+00:04:32,188 --> 00:04:36,050
+These are soft real-time results on a normal Windows host.
+
+46
+00:04:37,250 --> 00:04:44,847
+Requirements, linear control, nonlinear control, ROS integration, and software testing have executed evidence.
+
+47
+00:04:44,847 --> 00:04:51,409
+The plant model passes its mathematical checks and its separate Gazebo torque and contact test.
+
+48
+00:04:51,409 --> 00:04:58,108
+The editable PCB passes local KiCad rule checks and its current filter passes circuit simulation.
+
+49
+00:04:58,108 --> 00:05:05,982
+The GitHub demo website includes interactive measured replays, comparisons, project downloads, and a profile link.
+
+50
+00:05:05,982 --> 00:05:09,850
+GitHub verification tests remain manual at your request.
+
+51
+00:05:11,050 --> 00:05:17,621
+The video, phase report, and interactive demo website are delivered through your GitHub project.
+
+52
+00:05:17,621 --> 00:05:21,112
+The editable KiCad project is also on your desktop.
+
+53
+00:05:21,112 --> 00:05:28,847
+The report includes the measured comparison, live timing, fault results, PCB findings, and reproducible commands.
+
+54
+00:05:28,847 --> 00:05:34,323
+The project demonstrates control-engineering methods and industry design intent.
+
+55
+00:05:34,323 --> 00:05:41,100
+It does not establish safety certification, manufacturing readiness, or physical robot performance.

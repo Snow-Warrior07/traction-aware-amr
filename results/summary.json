@@ -51,8 +51,8 @@
     },
     {
       "phase": 2,
-      "status": "partial",
-      "result": "Mathematical plant invariants, friction, payload and timestep checks passed; Gazebo execution pending.",
+      "status": "verified",
+      "result": "Mathematical plant invariants, friction, payload and timestep checks passed; Gazebo effort/contact bridge executed.",
       "evidence": "tests/test_control_plant.py; results/gazebo_smoke.json"
     },
     {
@@ -75,8 +75,8 @@
     },
     {
       "phase": 6,
-      "status": "partial",
-      "result": "Virtual board trip/timeout/quantization tests passed; KiCad/SPICE verification pending or failed; inspect CI.",
+      "status": "verified",
+      "result": "Virtual board trip/timeout/quantization tests passed; KiCad/SPICE and exports verified.",
       "evidence": "results/drc.json; results/erc.json; results/spice.json; hardware/"
     },
     {
@@ -87,9 +87,9 @@
     },
     {
       "phase": 8,
-      "status": "partial",
-      "result": "Dedicated GitHub repository published; final CI/release/showcase checks remain until recorded.",
-      "evidence": "https://github.com/Snow-Warrior07/traction-aware-amr"
+      "status": "verified",
+      "result": "GitHub repository, interactive Pages demo and profile project link delivered. GitHub verification tests remain manual at the user's request.",
+      "evidence": "README.md; site/; output/publication.json"
     }
   ],
   "live": {
@@ -350,7 +350,30 @@
     "replayed_odom_messages": 430,
     "bag_created": true
   },
-  "gazebo": null,
+  "gazebo": [
+    {
+      "case": "warehouse",
+      "odom_messages": 127,
+      "wheel_messages": 1753,
+      "displacement_m": 1.335103582868423,
+      "body_speed_m_s": 2.0676780152799825,
+      "wheel_speed_rad_s": 31.93441374339622,
+      "wheel_body_divergence_m_s": 0.3274030154747338,
+      "ros_gazebo_bridge": true,
+      "effort_nm": 0.8
+    },
+    {
+      "case": "warehouse_low_friction",
+      "odom_messages": 4691,
+      "wheel_messages": 5026,
+      "displacement_m": 0.7049973738409712,
+      "body_speed_m_s": 1.1400744818484736,
+      "wheel_speed_rad_s": 126.11811845341089,
+      "wheel_body_divergence_m_s": 8.318784402157341,
+      "ros_gazebo_bridge": true,
+      "effort_nm": 0.8
+    }
+  ],
   "spice": {
     "rc_expected_tau_s": 0.001,
     "measured_tau_s": 0.00100116,

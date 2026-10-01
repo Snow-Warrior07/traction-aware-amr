@@ -1,0 +1,30 @@
+Reference,Value,Footprint
+U1,Raspberry Pi Pico RP2040,Module:RaspberryPi_Pico_Common_THT
+U2,74HC08 AND gate,Package_DIP:DIP-14_W7.62mm
+U3,74HC74 fault latch,Package_DIP:DIP-14_W7.62mm
+J1,5V power / 24V sense,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical
+J2,LEFT DRIVER,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical
+J3,RIGHT DRIVER,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical
+J4,LEFT ENCODER,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J5,RIGHT ENCODER,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J6,3V3 IMU,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J7,UART DEBUG,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+R1,1k,Resistor_SMD:R_0805_2012Metric
+R2,1k,Resistor_SMD:R_0805_2012Metric
+R3,100k,Resistor_SMD:R_0805_2012Metric
+R4,10k,Resistor_SMD:R_0805_2012Metric
+R5,2.2k,Resistor_SMD:R_0805_2012Metric
+R6,2.2k,Resistor_SMD:R_0805_2012Metric
+R7,10k,Resistor_SMD:R_0805_2012Metric
+R8,10k,Resistor_SMD:R_0805_2012Metric
+R9,10k,Resistor_SMD:R_0805_2012Metric
+R10,10k,Resistor_SMD:R_0805_2012Metric
+C1,1u,Capacitor_SMD:C_0805_2012Metric
+C2,1u,Capacitor_SMD:C_0805_2012Metric
+C3,100n,Capacitor_SMD:C_0805_2012Metric
+C4,100n,Capacitor_SMD:C_0805_2012Metric
+C5,10u,Capacitor_SMD:C_0805_2012Metric
+C6,100n,Capacitor_SMD:C_0805_2012Metric
+C7,100n,Capacitor_SMD:C_0805_2012Metric
+C8,100n,Capacitor_SMD:C_0805_2012Metric
+SW1,Manual drive reset,Button_Switch_THT:SW_PUSH_6mm_H4.3mm
