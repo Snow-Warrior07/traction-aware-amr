@@ -4,7 +4,7 @@ An entirely virtual control-engineering project: a differential-drive rover, lin
 
 The plant models independent wheel/body velocity, motor current, payload and friction-limited contact. A noisy delayed pose sensor plus wheel encoders and IMU feeds the estimator. Simulator truth is used only for sensor generation and evaluation.
 
-**[Open the interactive demo](https://snow-warrior07.github.io/traction-aware-amr/)** · [Phase results](docs/PHASE_RESULTS.md) · [Download KiCad project](https://snow-warrior07.github.io/traction-aware-amr/downloads/traction-aware-amr-kicad.zip) · [PDF report](https://snow-warrior07.github.io/traction-aware-amr/downloads/phase-report.pdf)
+**· [Phase results](docs/PHASE_RESULTS.md) · [Download KiCad project](https://snow-warrior07.github.io/traction-aware-amr/downloads/traction-aware-amr-kicad.zip) · [PDF report](https://snow-warrior07.github.io/traction-aware-amr/downloads/phase-report.pdf)
 
 ![Actual KiCad 10 render of the verified Pico carrier](site/assets/carrier-isometric.png)
 
